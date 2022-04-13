@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class notortalamasi {
+    public static void main(String[] args) {
+
+        int mat,geo,fizik,kimya,biyoloji,beden;
+        boolean durum;
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Mat notunu giriniz:");
+        mat = scan.nextInt();
+        System.out.println("Geometri notunu giriniz:");
+        geo = scan.nextInt();
+        System.out.println("Fizik notunu giriniz:");
+        fizik = scan.nextInt();
+        System.out.println("Kimya notunu giriniz:");
+        kimya = scan.nextInt();
+        System.out.println("Biyoloji notunu giriniz:");
+        biyoloji = scan.nextInt();
+        System.out.println("Beden eğitimi notunu giriniz:");
+        beden = scan.nextInt();
+
+        double ort = (mat+geo+fizik+kimya+biyoloji+beden) / 6 ;
+        durum = ort >= 60 ;
+        String sonuç = (durum) ? "Sınıfı Geçti" : "Sınıfta Kaldı";
+        System.out.println(ort);
+        System.out.println(sonuç);
+
+    }
+}
